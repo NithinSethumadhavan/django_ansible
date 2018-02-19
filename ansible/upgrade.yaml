@@ -3,8 +3,6 @@
   gather_facts: no
   tasks:
     - name: Running update and safe-upgrade
-      apt:
-        update_cache=yes
-        upgrade=safe
-      register: result
-    - debug: var=result.stdout_lines
+      apt: upgrade=dist
+#      register: result
+ #   - debug: var=result.stdout_lines
